@@ -3,12 +3,6 @@ package se.lexicon;
 public class App {
     public static void main( String[] args )
     {
-/*        A object = new A();
-        object.foo();
-
-        B objectB = new B();
-        objectB.foo();
-*/
         Lion lionName = new Lion();
         lionName.makeASound();
 
@@ -17,25 +11,7 @@ public class App {
 
 
 
-//Super-class of B
-class A {
 
-    public void foo(){
-        System.out.println("Im in A");
-    }
-
-}
-
-//Sub-class of A & Super-class of C
-class B extends A{
-
-    public void foo(){
-        System.out.println("Im in B");
-    }
-}
-
-// Sub-class of B
-class C extends B{}
 
 //Dont actually need to extends Object, it's already there.
 class Mammal extends Object{}
