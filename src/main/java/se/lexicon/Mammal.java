@@ -19,7 +19,7 @@ public class Mammal extends Animal{
     }
 
     //Returns a Mammal
-    protected Mammal foo() {
+    protected Mammal foo(Mammal boo) {
          return null;
     }
 
