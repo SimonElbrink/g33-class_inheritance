@@ -1,4 +1,6 @@
-package se.lexicon;
+package se.lexicon.Example.Inheritance;
+
+import java.util.Arrays;
 
 public class App {
     public static void main( String[] args )

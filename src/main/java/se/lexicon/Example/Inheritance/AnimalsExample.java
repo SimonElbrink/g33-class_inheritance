@@ -1,4 +1,4 @@
-package se.lexicon;
+package se.lexicon.Example.Inheritance;
 
 public class AnimalsExample {
 
@@ -10,6 +10,9 @@ public class AnimalsExample {
         Lion lionName = new Lion();
         lionName.makeASound();
 
+        Dog dog = new Dog("",0,0,"");
+        dog.makeASound();
+
         Mammal anotherMammal = new Lion();
         anotherMammal.makeASound();
 
@@ -20,11 +23,11 @@ public class AnimalsExample {
         System.out.println("newDog.getNameCollar() = " + newDog.getNameCollar());
 
 
-        //Casting works (Upgrading class, but may contain empty fields.)
+        //Casting doesn't works. compiles but throw runtime exception.
         lionName.foo((Mammal) new Animal());
 
 
-        //Parameter is Mammal lion IS a Mammal.
+        //Parameter is Mammal Lion IS a Mammal.
         lionName.foo(new Lion());
     }
 
@@ -46,7 +49,6 @@ class Lion extends Feline {
     @Override
     public void makeASound() {
         System.out.println("ROAR!");
-
     }
 
 
@@ -70,7 +72,8 @@ class Canine extends Mammal {
     private int teeth;
 
     public Canine(String name, double weight, int teeth) {
-        super(name, weight);
+        setName(name);
+        setWeight(weight);
         this.teeth = teeth;
     }
 }
@@ -100,6 +103,11 @@ class Wolf extends Canine {
 
     public Wolf(String name, double weight, int teeth) {
         super(name, weight, teeth);
+    }
+
+    @Override
+    public void makeASound(){
+        System.out.println("Howl!");
     }
 }
 
